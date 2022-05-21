@@ -22,9 +22,8 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-TxT = '<h2>당신의 IP는 <span>'
-TxT += httpGet("https://api.ipify.org/");
-TxT += '</span></h2>'
+
+TxT = '당신의 IP: ' + httpGet("https://api.ipify.org/");
 tag.innerHTML = TXT;
 document.body.appendChild(tag);
 
