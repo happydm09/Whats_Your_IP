@@ -1,20 +1,7 @@
 <html>
 <head>
 <title>What's Your IP</title>
-
-<style>
-span{color : red;
-     border-color : yellowgreen;
-     border-style : solid;
-     padding : 5px;
-}
-</style>
-
 <script>
-
-var tag = document.createElement('div');
-var TxT = "";
-
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -23,9 +10,9 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-pubilcIp = httpGet("https://api.ipify.org/");
-alert("Public IP: " + publicIp);
 
+publicIp = httpGet("https://api.ipify.org/");
+alert("Public IP: " + publicIp);
 </script>
 </head>
 <body>
