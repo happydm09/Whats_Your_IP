@@ -23,12 +23,8 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-Ip = httpGet("https://api.ipify.org/");
-TxT = '당신의 Public IP는 ' + Ip
-tag.innerHTML = TXT;
-document.body.appendChild(tag);
-
-alert("Public IP: " + Ip);
+pubilcIp = httpGet("https://api.ipify.org/");
+alert("Public IP: " + publicIp);
 
 </script>
 </head>
