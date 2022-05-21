@@ -10,13 +10,13 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 var tag = document.createElement('div');
-var tagTXT = 'hello'
+var t = 'hello';
 
 publicIp = httpGet("https://api.ipify.org/");
 alert("Public IP: " + publicIp);
-tagTXT = 'hell1o';
+t = 'hell1o';
 
-tag.innerHTML = tagTXT;
+tag.innerHTML = t;
 document.body.appendChild(tag);
 
 </script>
