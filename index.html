@@ -9,12 +9,16 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-
+let text = null
+let div = document.getElementById("div");
 
 publicIp = httpGet("https://api.ipify.org/");
 alert("Public IP: " + publicIp);
+text = '당신의 Public IP는 ' + publicIp
+div.innerHTML = text;
 </script>
 </head>
 <body>
+<div id="div"></div>
 </body>
 </html>
