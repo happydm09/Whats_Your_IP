@@ -1,7 +1,20 @@
 <html>
 <head>
 <title>What's Your IP</title>
+
+<style>
+span{color : red;
+     border-color : yellowgreen;
+     border-style : solid;
+     padding : 5px;
+}
+</style>
+
 <script>
+
+var tag = document.createElement('h2');
+var TxT = "";
+
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -9,13 +22,14 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
+TxT = '당신의 IP는 <span>'
+TxT += httpGet("https://api.ipify.org/");
+TxT += </span>
+tag.innerHTML = TXT;
+document.body.appendChild(tag);
 
-
-publicIp = httpGet("https://api.ipify.org/");
-alert("Public IP: " + publicIp);
 </script>
 </head>
-
 <body>
 </body>
 </html>
