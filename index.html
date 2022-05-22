@@ -16,7 +16,8 @@ function AddTXT(text_1){
  var text = "Your IP is: [NA]";
  
  text = "당신의 Public IP는 " + text_1;
- document.getElementById('tag').innerHTML = text
+ document.getElementById('tag').innerHTML = "h";
+ document.getElementById('tag').innerHTML = text;
 }
     
 var publicIp = httpGet("https://api.ipify.org/");
@@ -26,6 +27,7 @@ AddTXT(publicIp);
 </script>
 </head>
 <body>
-    <div id="tag"></div>
+    <div id="tag">
+    </div>
 </body>
 </html>
