@@ -19,7 +19,7 @@ function AddTXT(text_1){
  alert(Tag);
  text = "당신의 Public IP는 " + text_1;
  Tag.innerHTML = text;
- document.body.appendChild(Tag);
+ document.getElementById('tag').appendChild(Tag);
 }
     
 var publicIp = httpGet("https://api.ipify.org/");
