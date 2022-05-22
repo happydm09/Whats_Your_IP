@@ -13,13 +13,11 @@ function httpGet(theUrl)
 }
     
 function AddTXT(text_1){
- var Tag = document.createElement('div');
  var text = "Your IP is: [NA]";
  
  alert(Tag);
  text = "당신의 Public IP는 " + text_1;
- Tag.innerHTML = text;
- document.getElementById('tag').appendChild(Tag);
+ document.getElementById('tag').innerHTML = text
 }
     
 var publicIp = httpGet("https://api.ipify.org/");
