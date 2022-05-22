@@ -12,18 +12,16 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
     
-function AddTXT(text_1){
- var text = "Your IP is: [NA]";
- let TAG = document.body
- 
- text = "당신의 Public IP는 " + text_1;
- TAG.innerHTML = "h";
- document.getElementById('tag').innerHTML = text;
-}
-    
 var publicIp = httpGet("https://api.ipify.org/");
 alert("Public IP: " + publicIp);
-AddTXT(publicIp);
+
+var text = "Your IP is: [NA]";
+let TAG = document.body
+ 
+text = "당신의 Public IP는 " + publicIp;
+document.body.appendChild("h");
+document.getElementById('tag').innerHTML = text;
+
 
 </script>
 </head>
