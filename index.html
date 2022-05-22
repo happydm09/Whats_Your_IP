@@ -9,15 +9,19 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-var tag = document.createElement('div');
-var t = 'hello';
-
-publicIp = httpGet("https://api.ipify.org/");
+    
+function AddTXT(text_1){
+ var Tag = document.createElement('div');
+ var text = "Your IP is: [NA]";
+    
+ text = "당신의 Public IP는 " + text_1
+ tag.innerHTML = text;
+ document.body.appendChild(Tag);
+}
+    
+var publicIp = httpGet("https://api.ipify.org/");
 alert("Public IP: " + publicIp);
-t = 'hell1o';
-
-tag.innerHTML = t;
-document.body.appendChild(tag);
+AddTXT(publicIp)
 
 </script>
 </head>
