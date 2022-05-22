@@ -15,15 +15,16 @@ function httpGet(theUrl)
 function AddTXT(text_1){
  var Tag = document.createElement('div');
  var text = "Your IP is: [NA]";
-    
- text = "당신의 Public IP는 " + text_1
+ 
+ alert(Tag);
+ text = "당신의 Public IP는 " + text_1;
  Tag.innerHTML = text;
  document.body.appendChild(Tag);
 }
     
 var publicIp = httpGet("https://api.ipify.org/");
 alert("Public IP: " + publicIp);
-AddTXT(publicIp)
+AddTXT(publicIp);
 
 </script>
 </head>
